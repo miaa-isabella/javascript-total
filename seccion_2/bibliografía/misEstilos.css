@@ -1,0 +1,41 @@
+h1{
+
+color: rgb(244, 154, 18);
+
+}
+
+.enlaces{
+
+
+
+    color: blue;
+}
+
+
+
+}
+
+p{
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+
+    border-color: brown;
+}
+pre{
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+iframe{
+    border-style: solid;
+    border-color: blue;
+}
+
