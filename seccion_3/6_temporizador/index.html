@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+</head>
+<body>
+    
+
+<input type="number" id="tiempoElegido">
+<button onclick="comenzarTiempo()">Alarma</button>
+<h1 id="textoAlarma" style="color: rgb(226, 43, 43);">apagado</h1>
+
+<script>
+
+
+    let elementosegundos = document.getElementById("tiempoElegido");
+    let elementoTextoAlarma = document.getElementById("textoAlarma");
+
+        function comenzarTiempo(){
+
+            setTimeout(tiempocumplido,1000 * elementosegundos.value);
+
+
+    }
+
+    function tiempocumplido(){
+
+        elementoTextoAlarma.textContent = "encendido"
+        elementoTextoAlarma.style.color = "green";
+    }
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>pratica 2</title>
+</head>
+<body>
+
+<button onclick="test()">ingresa</button>
+<input type="text" id="cantante" value="tu cantante favorito es">
+<h1 id="titulo">cual es tú cantante favorito?</h1>
+
+
+<script>
+
+
+
+
+       function test(){
+
+        let ingreso = document.getElementById("cantante");
+        let salida = document.getElementById("titulo")
+        let mensaje ="ahora se cual es tú cantante favorito " + ingreso.value;
+
+        salida.textContent = mensaje;
+
+
+
+       }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
