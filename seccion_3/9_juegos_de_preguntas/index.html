@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>jueguito</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarReloj()">
+    
+
+    <h1>juego de preguntas</h1>
+    <h2 id="tiempotexto">00</h2>
+    <button onclick="comenzar()">comenzar</button>
+    <audio src="audios/gameover.mp3" id="audioAlarma"></audio>
+    <p>1.¿cual es el mamífero más grande del mundo?</p>
+    <input type="text" id="p5">
+
+    <p>2.¿quien descubrío Ámerica?</p>
+        <input type="text" id="p4">
+
+    <p>3.¿cuanto es 15 + 15?</p>
+    <input type="text" id="p3">
+
+    <p>4.¿quien es el rey de los dinosaurios?</p>
+    <input type="text" id="p2">
+
+    <p id=>5.yo quiero saber...?</p>
+    <input type="text" id="p1">
+    <button type="button" onclick="finalizar()">finalizar</button>
+    <button onclick="location.reload()">comenzar de nuevo</button>
+
+    <script>
+    let elementoTexto = document.getElementById("tiempotexto");
+    let elementoSonidoalarma = document.getElementById("audioAlarma");
+  
+
+
+
+    function comenzar() {
+        setTimeout(tiempoCumplido, 1000 * 30);
+    }
+
+
+
+
+    function comenzarReloj() {
+
+        setInterval(ticatac, 1000);
+    
+    
+    
+    
+    }
+    function ticatac(){
+        let tiempoActual = new Date();
+        let seunditos = string(tiempoActual.getSeconds()).padstart(2,"0")
+        
+        let textoHora = seunditos;
+        elementoTexto.textContent = textohora;
+       
+
+    }
+
+    function tiempoCumplido() {
+        alert("GAME OVER ")
+        elementoSonidoalarma.play()
+    }
+
+    function finalizar(){
+
+        alert("tus respuestas son ");
+    }
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
