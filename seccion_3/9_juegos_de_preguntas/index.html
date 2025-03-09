@@ -1,83 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
-    <title>jueguito</title>
+    <title>Jueguito</title>
     <link rel="stylesheet" href="misEstilos.css">
 </head>
-<body onload="comenzarReloj()">
-    
-
-    <h1>juego de preguntas</h1>
-    <h2 id="tiempotexto">00</h2>
-    <button onclick="comenzar()">comenzar</button>
+<body>
+    <h1>Juego de preguntas</h1>
+    <h2 id="tiempotexto">30</h2> <!-- Iniciamos mostrando 30 segundos -->
+    <button onclick="comenzar()">Comenzar</button>
     <audio src="audios/gameover.mp3" id="audioAlarma"></audio>
-    <p>1.¿cual es el mamífero más grande del mundo?</p>
+
+    <p>1. ¿Cuál es el mamífero más grande del mundo?</p>
     <input type="text" id="p5">
 
-    <p>2.¿quien descubrío Ámerica?</p>
-        <input type="text" id="p4">
+    <p>2. ¿Quién descubrió América?</p>
+    <input type="text" id="p4">
 
-    <p>3.¿cuanto es 15 + 15?</p>
+    <p>3. ¿Cuánto es 15 + 15?</p>
     <input type="text" id="p3">
 
-    <p>4.¿quien es el rey de los dinosaurios?</p>
+    <p>4. ¿Quién es el rey de los dinosaurios?</p>
     <input type="text" id="p2">
 
-    <p id=>5.yo quiero saber...?</p>
+    <p>5. Yo quiero saber...?</p>
     <input type="text" id="p1">
-    <button type="button" onclick="finalizar()">finalizar</button>
-    <button onclick="location.reload()">comenzar de nuevo</button>
+
+    <button onclick="finalizar()">Finalizar</button>
+    <button onclick="location.reload()">Comenzar de nuevo</button>
 
     <script>
-    let elementoTexto = document.getElementById("tiempotexto");
-    let elementoSonidoalarma = document.getElementById("audioAlarma");
-  
+    let tiempoRestante = 30; // Tiempo inicial en segundos
+    let intervalo; // Variable para almacenar el intervalo
+    const elementoTexto = document.getElementById("tiempotexto");
+    const elementoSonidoAlarma = document.getElementById("audioAlarma");
 
-
-
+    // Función para iniciar el juego y la cuenta regresiva
     function comenzar() {
-        setTimeout(tiempoCumplido, 1000 * 30);
+        tiempoRestante = 30; // Reiniciamos el tiempo
+        elementoTexto.textContent = tiempoRestante; // Mostramos 30 en el h2
+        clearInterval(intervalo); // Por si había un intervalo previo, lo detenemos
+        intervalo = setInterval(() => {
+            if (tiempoRestante > 0) {
+                tiempoRestante--; // Reducimos el tiempo
+                elementoTexto.textContent = tiempoRestante; // Actualizamos el h2
+            } else {
+                tiempoCumplido(); // Cuando el tiempo llegue a 0
+                clearInterval(intervalo); // Detenemos el intervalo
+            }
+        }, 1000); // Actualizamos cada 1 segundo
     }
 
-
-
-
-    function comenzarReloj() {
-
-        setInterval(ticatac, 1000);
-    
-    
-    
-    
-    }
-    function ticatac(){
-        let tiempoActual = new Date();
-        let seunditos = string(tiempoActual.getSeconds()).padstart(2,"0")
-        
-        let textoHora = seunditos;
-        elementoTexto.textContent = textohora;
-       
-
-    }
-
+    // Función para cuando el tiempo se acaba
     function tiempoCumplido() {
-        alert("GAME OVER ")
-        elementoSonidoalarma.play()
+        elementoTexto.textContent = "¡Tiempo agotado!";
+        elementoSonidoAlarma.play();
+        alert("GAME OVER");
     }
 
-    function finalizar(){
-
-        alert("tus respuestas son ");
+    // Función para finalizar el juego y mostrar las respuestas
+    function finalizar() {
+        const p1 = document.getElementById("p1").value;
+        const p2 = document.getElementById("p2").value;
+        const p3 = document.getElementById("p3").value;
+        const p4 = document.getElementById("p4").value;
+        const p5 = document.getElementById("p5").value;
+        tiempoActual= new Date();
+        alert("Tus respuestas son:\n1: " + p5 + "\n2: " + p4 + "\n3: " + p3 + "\n4: " + p2 + "\n5: " + p1 + tiempoActual);
     }
-
     </script>
-
-
-
-
-
-
-
 </body>
 </html>
