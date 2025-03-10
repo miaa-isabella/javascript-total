@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mostrarfecha()">fecha de hoy</button>
+
+<script>
+
+
+
+    function mostrarfecha(){
+        alert(obtenerfecha());
+
+
+    }
+
+    function obtenerfecha(){
+        fecha= new Date();
+        Fecha=fecha.toLocaleDateString("es-ES")
+        return(Fecha);
+
+
+
+    }
+</script>
+
+</body>
+</html>
