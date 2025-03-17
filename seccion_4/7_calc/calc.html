@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <h1>calculadora</h1>
+
+    <div id="botones">
+        <button onclick="sumar()">+</button>
+        <button onclick="restar()">-</button>
+        <button onclick="dividir()">/</button>
+        <button onclick="multiplicar()">x</button>
+        <button onclick="raiz()">raiz</button>
+        <button onclick="potencia()">potencia</button>
+        <button onclick="random()">random</button>
+        <button onclick="floor()">floor</button>
+        <button onclick="arriba()">redondear hacia arriba</button>
+    </div>
+
+    <div id="inputs">
+        <input type="number" id="imput1">
+        <input type="number" id="imput2">
+
+    </div>
+
+    <h3>resultado:</h3> <br> <div id="result"></div>
+    <script>
+
+
+        let Put1 = document.getElementById("imput1");
+        let Put2 = document.getElementById("imput2");
+        let texto = document.getElementById("result");
+
+        function sumar(){
+
+            suma= parseInt(Put1.value) + parseInt(Put2.value);
+            console.log(suma);
+            texto.textContent = suma;
+
+        }
+
+
+        function restar(){
+
+            resta= parseInt(Put1.value) - parseInt(Put2.value);
+            console.log(resta);
+            texto.textContent = resta;
+
+        }
+        function multiplicar(){
+
+            multi= parseInt(Put1.value) * parseInt(Put2.value);
+            console.log(multi);
+            texto.textContent = multi;
+
+        }
+
+        function dividir(){
+
+            divi= parseInt(Put1.value) / parseInt(Put2.value);
+            console.log(divi);
+            texto.textContent = divi;
+
+        }
+        function raiz(){
+
+           let root= Math.sqrt(Put1.value);
+            console.log(root);
+            texto.textContent = root;
+        }
+
+        function potencia(){
+
+            let pot = Math.pow(parseInt(Put1.value), parseInt(Put2.value));
+            console.log(pot);
+            texto.textContent = pot
+        }
+
+        function random(){
+
+            let ran= Math.floor(Math.random() * 100) + 1;
+            console.log(ran);
+            texto.textContent = ran;
+        }
+
+        function floor(){
+
+            let piso = Math.floor(parseFloat(Put1.value) + parseFloat(Put2.value));
+            console.log(piso);
+            texto.textContent = piso;
+
+        }
+
+        function arriba(){
+
+            let resultado = Math.ceil(parseFloat(Put1.value) + parseFloat(Put2.value));
+            console.log(resultado)
+            texto.textContent= resultado;
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

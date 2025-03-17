@@ -1,18 +1,67 @@
+/* Estilos generales */
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    height: 100vh; /* Hace que el body tenga la altura completa de la ventana */ 
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
 }
 
+h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
 
-h3 {
+/* Estilo para el contenedor de los botones */
+#botones {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
 
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
 
- border-color: blueviolet;
- 
+button:hover {
+    background-color: #005bb5;
+}
 
+/* Estilos para los inputs */
+#inputs {
+    margin: 20px 0;
+}
 
+input[type="number"] {
+    padding: 10px;
+    width: 120px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
 
+/* Estilo para el resultado */
+#result {
+    margin: 20px auto;
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #0078d7;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #e8f4ff;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
