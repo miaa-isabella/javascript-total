@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>practica switch</title>
+</head>
+<body>
+    <h1>Fruteria</h1>
+    <p>escriba el nombre de las frutas como se muestra en la lista</p>
+    <ol>
+        <li>Manzana</li>
+        <li>Piña</li>
+        <li>Pera</li>
+        <li>Fresas</li>
+        <li>Mango</li>
+    </ol>
+    <input type="text" id="text">
+    <button onclick="precios()">consultar precio</button>
+    <h3 id="textprecio">---</h3>
+
+    <script>
+
+        let textoFruta = document.getElementById("text");
+        let precio = document.getElementById("textprecio");
+
+        function precios(){
+          
+            switch (textoFruta)
+            {
+                case "1": 
+                    precio.textContent = "$1.20 P/U";
+                    break;
+                case "2": 
+                    precio.textContent = "$3.25 P/U";
+                    break;
+                case "3": 
+                    precio.textContent = "$1.50 P/U";
+                    break;    
+                case "4": 
+                    precio.textContent = "cent 50 P/U";
+                    break;
+                case "5": 
+                    precio.textContent = "$2 P/U";
+                    break;
+
+            }
+
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

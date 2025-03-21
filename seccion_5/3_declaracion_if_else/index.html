@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Declaracion if/else</title>
+</head>
+<body>
+    <p>digita tu edad</p>
+    <input type="number" id="textoEdad">
+    <button onclick="verificar()">comprar</button>
+    <br/>
+    <h3 id="desicion"></h3>
+
+    <script>
+        let elementorespuesta = document.getElementById("desicion");
+
+        let elemetoEdad = document.getElementById("textoEdad");
+        let edad = parseInt(elemetoEdad.value);
+        function verificar(){
+            if (edad < 18) {
+                elementorespuesta.textContent = "tienes" + edad + "años,te falta " + 
+                (18 - parseInt(edad)).toString() + " años para ser mayor de edad";
+
+            }       else {
+                if ( edad >= 18 && edad < 21) {
+
+                    elementorespuesta.textContent = "tienes " + edad + " años,te falta " 
+                    + (21 - parseInt(edad)).toString() + " años para " + 21 + " , no puesdes comprar licor";
+                } else {
+
+                elementorespuesta.textContent = " ya puedes comprar licor";
+            }
+
+
+
+        }
+
+
+            }
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
