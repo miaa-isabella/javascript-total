@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>seccion de jeans</h1>
+
+    <p>ingrese su talla</p>
+    <input type="text" id="talla">
+    <p>inserte cuantos jeans quiere comprar</p>
+    <input type="number" id="num">
+
+
+
+
+    <div>
+
+        <img src="jeans/descargar (4).jfif"
+        width="300px"
+        left="20%" >
+        <p>pantalon con diseño floreado</p>
+        <button onclick="escoger(`flores`)">escoger</button>
+
+    </div>
+
+    <div>
+
+        <img src="jeans/Star mini skirt.jfif"
+        width="300px"
+        left="10%">
+        <p>falda de jean, con diseño de estrella</p>
+        <button onclick="escoger(`star`)">escoger</button>
+    </div>
+
+    <div>
+        <img src="jeans/Y2k Denim Mini Skirt Washed Frayed Hem Stretch Jean Grunge Streetwear, Star Details - Amazon.jfif" 
+        width="300px"
+        left="10%">
+        <p>falda de jean, con bordado de estrella</p>
+        <button onclick="escoger(`estrella`)">escoger</button>
+    </div>
+
+    <a href="closet.html">volver al inicio</a>
+
+    <script>
+        let tallas = document.getElementById("talla");
+        let numero = document.getElementById("num");
+        let pago = "";
+        function escoger(jeans){
+            switch(jeans){
+                case `flores`:
+                alert("escogiste el pantalon floreado en talla " + tallas.value + " en " + numero.value + " unidades")
+                while(pago != 25){
+                    pago = prompt("el monto a pagar es $25")
+                    document.write("<h1>Gracias por su compra!</h1>")
+                }
+                break;
+                case `star`:
+                alert("escogiste la falda con diseño de estrella en talla " + tallas.value + " en " + numero.value + " unidades")
+                while(pago != 17){
+                    pago = prompt("el monto a pagar es $17")
+                    document.write("<h1>Gracias por su compra!</h1>")
+                }
+                break;
+                case `estrella`:
+                alert("escogiste el pantalon floreado en talla " + tallas.value + " en " + numero + " unidades")
+                while(pago != 20){
+                    pago = prompt("el monto a pagar es $20")
+                    document.write("<h1>Gracias por su compra!</h1>")
+                }
+                break;
+
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

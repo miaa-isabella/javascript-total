@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>seccion de vestidos</h1>
+
+
+<p>inserte su talla</p>
+    <input type="text" id="talla">
+    <p>inserte el numero de vestidos 
+        que desea comprar</p>
+    <input type="number" id="numero">
+
+
+
+
+
+<div>
+    <img src="vestidos/descargar (2).jfif"
+    width="300px"
+    left="10%"
+    >
+    <p>vestido de noche estrellado</p>
+    <button onclick="escoger(`azul`)">escoger</button>
+    
+
+</div>
+
+
+<div>
+
+    <img src="vestidos/descargar (3).jfif"
+    width="300px"
+    left="10%" >
+    <p>vestido colorido, veraniego</p>
+    <button onclick="escoger(`colorido`)">escoger</button>
+
+</div>
+
+<div id="texto">
+
+
+</div><br>
+
+<script>
+
+let elementoTalla = document.getElementById("talla");
+let elemetonumero = document.getElementById("numero");
+let elementoTexto = document.getElementById("texto");
+let elementopago = "";
+
+function escoger(vestidos){
+    switch(vestidos){
+
+        case `azul`:
+            alert("escogiste el vestido azul en talla " + elementoTalla.value + " en " + elemetonumero.value + " unidades" + " debes pagar $75")
+            while (elementopago != 75){
+                elementopago = prompt("el monto a pagar es $75")
+                document.write("<h2>gracias por su compra</h2>")
+
+            }
+            
+          break;  
+        case `colorido`:
+            alert("escogiste el vestido colorido en talla " + elementoTalla.value + " en " + elemetonumero.value + " unidades " + " debes pagar $50")
+            while (elementopago != 50){
+                elementopago = prompt("el monto a pagar es $50")
+                document.write("<h2>gracias por su compra!</h2>")
+
+            }
+           break;     
+    }
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+<a href="closet.html">volver al inicio</a>
+
+
+</body>
+</html>

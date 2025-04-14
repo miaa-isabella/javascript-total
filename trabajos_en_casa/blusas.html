@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>seccion de blusas</h1>
+    <p>inserte su talla </p>
+    <input type="text" id="talla">
+    <p>inserte el numero de blusas que desea comprar</p>
+    <input type="number" id="num">
+
+    <div>
+        <img src="blusas/Coachella 2025 Outfits.jfif"
+        width="300px"
+        left="10%">
+        <p>blusa rosa, floreada, estilo romántico</p>
+        <button onclick="escoger(`rosa`)">escoger</button>
+    </div>
+
+
+    <div>
+        <img src="blusas/descargar (1).jfif"
+        width="300px"
+        left="10%">>
+        <p>blusa verde, floreada, estilo romántico</p>
+        <button onclick="escoger(`verde`)">escoger</button>
+    </div><br>
+
+    <div id="text"
+    rigth="50%"></div>
+
+    <script>
+
+        let Texto = document.getElementById("text");
+        let elementoTalla = document.getElementById("talla");
+        let eelementoNumero = document.getElementById ("num");       
+        let pago = "";
+        
+        function escoger(blusas){
+            switch (blusas){
+                case `rosa`:
+                alert("elegiste el vestido rosa en talla " + elementoTalla.value + " en " + eelementoNumero.value + " unidades")
+
+                while(pago != 18){
+                    pago = prompt("el pago a realizar es de $18")
+                    document.write("<h1>Gracias por su compra! </h1>")
+                }
+                break;
+                case `verde`:
+                alert("elegiste el vestido verde en talla " + elementoTalla.value + " en " + eelementoNumero.value + " unidades")
+
+                while(pago != 20){
+                    pago = prompt("el pago a realizar es de $20")
+                    document.write("<h1>Gracias por su compra! </h1>")
+                }
+                break;
+
+            }
+
+        }
+
+
+    </script>
+
+
+    <a href="closet.html">volver al inicio</a>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
