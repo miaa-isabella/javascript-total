@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>zapatos</title>
+</head>
+<body>
+    
+    <h1>sección de zapatos</h1>
+
+    <p>inserte su talla de zapatos</p>
+    <input type="number" id="talla">
+    <p>inserte la cantidad de pares de zapatos desea comprar</p>
+    <input type="number" id="num">
+    <div>
+        <img src="zapatos/descargar (5).jfif"
+        width="200px"
+        left="10%">
+        <p>botas vaqueras, con diseño floreado</p>
+        <button onclick="escoger(`botas`)">escoger</button>
+    </div>
+    <div>
+        <img src="zapatos/descargar (6).jfif" 
+        width="200px"
+        left="10%">
+        <p>sandalias multicolor</p>
+        <button onclick="escoger(`sandalias`)">escoger</button>
+    </div>
+    <div>
+        <img src="zapatos/descargar (7).jfif"
+        width="200px"
+        left="10%">
+        <p>zapatos estilo ballerina</p>
+        <button onclick="escoger(`ballerina`)">escoger</button>
+    </div>
+
+    <a href="closet.html">volver al inicio</a>
+
+    <script>
+        let numero = document.getElementById("num");
+        let size = document.getElementById("talla");
+        pago = "";
+
+        function escoger(zapatos){
+            switch(zapatos)
+            {
+                case `botas`: 
+                    alert("escogiste las botas vaqueras floreadas en talla " + size.value + " en " + numero.value + " pares")
+                    while(pago != 30){
+                        pago = prompt("debes de pagar $30")
+                        document.write("<h1>Gracias por su compra!</h1>")
+                    }
+                break;
+
+                case `sandalias`: 
+                    alert("escogiste las sandalias coloridas en talla " + size.value + " en " + numero.value + " pares")
+                    while(pago != 25){
+                        pago = prompt("debes de pagar $25")
+                        document.write("<h1>Gracias por su compra!</h1>")
+                    }
+                break;
+
+                case `ballerina`: 
+                    alert("escogiste los zapatos estilo ballerina en talla " + size.value + " en " + numero.value + " pares")
+                    while(pago != 27){
+                        pago = prompt("debes de pagar $27")
+                        document.write("<h1>Gracias por su compra!</h1>")
+                    }
+                break;
+
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
