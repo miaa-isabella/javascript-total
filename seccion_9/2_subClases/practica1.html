@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class persona{
+            constructor(nombre, apellido){
+                this.nombre = nombre;
+                this.apellido = apellido;
+            }
+        }
+
+        class empleado extends persona{
+            constructor(nombre, apellido, cargo){
+                super(nombre, apellido);
+                this.cargo = cargo;
+            }
+        }
+        let empleado1 = new empleado("Mia", "Sanchez", "estudiante");
+        console.log(empleado1)
+    
+    </script>
+</body>
+</html>

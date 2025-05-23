@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <script>
+        class colegio {
+            constructor(nombre, cuidad, cantestudiantes) {
+                this.nombre = nombre;
+                this.cuidad = cuidad;
+                this._cantestudiantes = cantestudiantes;
+               
+            }
+      
+            get cantestudiantes() {
+                return this._estudiantes;
+            }
+ 
+            set cantestudiantes(nuevosestudiantes) {
+                this._estudiantes = nuevosestudiantes;
+            }
+    
+          }
+        let gsd = new colegio("GSD", "Guacima", 50000);
+        console.log(gsd)
+    </script>
+</body>
+ 
+</html>

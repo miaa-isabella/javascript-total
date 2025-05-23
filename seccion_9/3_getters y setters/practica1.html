@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class ciudad {
+            constructor(nombre, pais, cantHabitantes) {
+                this.nombre = nombre;
+                this.pais = pais;
+                this._cantHabitantes = cantHabitantes;
+            }
+
+            get cantHabitantes() {
+                return this._cantHabitantes;
+            }
+
+            set cantHabitantes(nuevoshabitantes) {
+                this._cantHabitantes = nuevoshabitantes;
+            }
+        }
+
+        let cuidad2 = new ciudad("Alajuela", "Costa Rica", 50000);
+        console.log(cuidad2)
+    </script>
+</body>
+
+</html>
