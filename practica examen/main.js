@@ -5,7 +5,7 @@ fetch('estudiantes.json')
     datosJson = obtenerdatos;
 });
 
-let names = document.getElementById("nombres");
+let names = document.getElementById("nombres").value;
 function registrarNota(nombre){
     
     let respuesta = parseInt(prompt("cual es tú nota?"));
@@ -15,9 +15,14 @@ function registrarNota(nombre){
     else{
         alert("por favor inserte su nota");
     };
-
 }
+
+
+
 
 function registrarnota(){
 
+ estudiantes.forEach(estudiante=> {
+    
+ });
 }
