@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumarnumeros(a, b){
+            return new promise(function(resolve, reject){
+                setTimeout(function(){
+                    if (typeof a != 'number' || typeof b != 'number'){
+                        reject(new Error("ambos argumentos deben ser números"))
+                    }else{
+                        resolve(a + b)
+                    }
+                },1000)
+            })
+        }
+        sumarnumeros(1, '2')
+        .then(function(resultado){
+            console.log(resultado)
+        }).catch(function(error){
+            console.log(error)
+        })
+    </script>
+</body>
+</html>
